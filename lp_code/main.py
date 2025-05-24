@@ -7,3 +7,4 @@ sets, params = load_data("data", max_perishable_age=2)
 # 2) 모델 생성 및 최적화
 solver = LPSolver(sets, params)
 solver.solve()
+print("hi")
