@@ -172,3 +172,11 @@ cython_debug/
 
 # PyPI configuration file
 .pypirc
+
+# 가상환경
+POM_LP/
+
+# data들
+data_folder/
+demand_forecast/
+given_data/
