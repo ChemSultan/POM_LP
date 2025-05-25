@@ -6,7 +6,6 @@ from csv_handler import CSVHandler
 def load_data():
     """
     Read all parameter CSV files from the project root's data_folder and return (sets, params).
-    The maximum perishable age is read from the environment variable 'MAX_PERISHABLE_AGE' or defaults to 2.
 
     Expects files in <project_root>/data_folder:
       - demand.csv   (i, n, t, D)
@@ -45,10 +44,7 @@ def load_data():
         beta = 0.1
 
     # Read max perishable age from env or default
-    max_age_env = os.getenv("MAX_PERISHABLE_AGE")
-    max_perishable_age = (
-        int(max_age_env) if max_age_env and max_age_env.isdigit() else 2
-    )
+    max_perishable_age = 3
 
     # Build param dicts
     D = {(row.i, row.n, int(row.t)): float(row.D) for row in demand_df.itertuples()}
