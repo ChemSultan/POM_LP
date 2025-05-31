@@ -2,6 +2,8 @@ import math
 import gurobipy as gp
 from gurobipy import GRB
 
+from itertools import product
+
 
 class LPSolver:
     def __init__(self, sets: dict, params: dict):
